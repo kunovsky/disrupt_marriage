@@ -10,6 +10,6 @@ get '/' do
 EOF
 end
 
-post '/' do
+post '/process' do
 end
 
