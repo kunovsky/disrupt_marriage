@@ -22,6 +22,9 @@ post '/process' do
   response.headers['Access-Control-Max-Age'] = '86400'
   response.headers["Access-Control-Allow-Headers"] = "X-Requested-With, X-HTTP-Method-Override, Content-Type, Cache-Control, Accept"
   couple_results = []
+  p "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
+  p params["emovuData"]
+  p "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
   JSON.parse(params["emovuData"]).each do |user|
 
     counter = 1
