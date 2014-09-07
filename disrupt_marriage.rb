@@ -23,3 +23,12 @@ post '/process' do
   {score: 95}.to_json
 end
 
+
+options "*" do
+  response.headers["Allow"] = "HEAD,GET,PUT,DELETE,OPTIONS"
+
+  # Needed for AngularJS
+  response.headers["Access-Control-Allow-Headers"] = "X-Requested-With, X-HTTP-Method-Override, Content-Type, Cache-Control, Accept"
+
+  halt HTTP_STATUS_OK
+end
