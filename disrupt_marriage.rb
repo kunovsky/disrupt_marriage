@@ -14,8 +14,8 @@ end
 
 post '/process' do
   response.headers["Access-Control-Allow-Origin"] = "*"
-  response.headers["Access-Control-Allow-Methods"] = "POST"
+  response['Access-Control-Allow-Origin'] = '*'
 
-{score: 95}.to_json
+  {score: 95}.to_json
 end
 
