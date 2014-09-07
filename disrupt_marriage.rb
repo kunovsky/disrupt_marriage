@@ -21,7 +21,7 @@ get '/' do
 EOF
 end
 
-get '/process' do
+post '/process' do
 
 {score: 95}.to_json
 end
