@@ -6,8 +6,8 @@ require 'json'
 EMOTIONS = {"Anger"=>"bad", "Disgust"=>"bad", "Fear"=>"bad", "Joy"=>"good", "Neutral"=>"good", "Sadness"=>"bad", "Surprise" => "good"}
 
 get '/process' do
-  response.headers['Allows'] = "HEAD,GET,PUT,DELETE,OPTIONS,"
   # Needed for AngularJS
+  response.headers['Allows'] = "HEAD,GET,PUT,DELETE,OPTIONS,"
   response.headers['Access-Control-Allow-Origin'] = '*'
   response.headers['Access-Control-Expose-Headers'] = 'ETag'
   response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PATCH, PUT, DELETE, OPTIONS, HEAD'
