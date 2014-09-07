@@ -44,17 +44,17 @@ post '/process' do
     else
       couple_results << {score: (overall_scores[:good].to_f/ overall_scores[:bad]), type: :bad}
     end
-    final = {}
-    if couple_results[0][:score] <= 1 && couple_results[1][:score] <= 1
-      final[:score] = :bad
-      final[:partner_1] = couple_results[0][:score]
-      final[:partner_2] = couple_results[1][:score]
-    else
-      final[:score] = :good
-      final[:partner_1] = couple_results[0][:score]
-      final[:partner_2] = couple_results[1][:score]
-    end 
   end
+  final = {}
+  if couple_results[0][:score] <= 1 && couple_results[1][:score] <= 1
+    final[:score] = :bad
+    final[:partner_1] = couple_results[0][:score]
+    final[:partner_2] = couple_results[1][:score]
+  else
+    final[:score] = :good
+    final[:partner_1] = couple_results[0][:score]
+    final[:partner_2] = couple_results[1][:score]
+  end 
   final.to_json
 end
 
