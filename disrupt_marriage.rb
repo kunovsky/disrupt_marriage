@@ -14,11 +14,6 @@ EOF
 end
 
 post '/process' do
-  params[:emovuData]
-  {score: 95}.to_json
-end
-
-get '/test' do
   couple_results = []
   JSON.parse(params["emovuData"]).each do |user|
 
