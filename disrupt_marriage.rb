@@ -23,7 +23,7 @@ post '/process' do
   response.headers["Access-Control-Allow-Headers"] = "X-Requested-With, X-HTTP-Method-Override, Content-Type, Cache-Control, Accept"
   couple_results = []
   p "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
-  p params["emovuData"]
+  p params
   p "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
   JSON.parse(params["emovuData"]).each do |user|
 
