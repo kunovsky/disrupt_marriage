@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'sinatra'
 require 'thin'
+require 'json'
 
 get '/' do
 <<EOF
@@ -11,5 +12,6 @@ EOF
 end
 
 post '/process' do
+{score: 95}.to_json
 end
 
